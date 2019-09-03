@@ -163,6 +163,30 @@
 		let [a, b, c] = angka
 		console.log(a + b + c);
 
+		console.log("======================================================");
+		console.log("6. Class");
+
+		class Members {
+			constructor(name, umur) { // fungsi yang pertama kali di jalankan dalam sebuah class
+				this.name = name
+				this.umur = umur
+			}
+
+			getMember(name) {
+				return `namanya : ${this.name}` // this untuk mengakses variabel yang ada pada class ini sendiri
+			}
+
+			static getUmur() { // function static adalah fungsi yang bisa di panggil tanpa harus mendeklarasikan class nya
+				return `Umurnya : ${umur}`
+			}
+		}
+
+		let member = new Members('Danis', 20)
+		// console.log(member);
+		// console.log(member.getMember());
+
+		console.log(Members.getUmur());
+
 
 
 

@@ -18,8 +18,7 @@
 
 		// ======================================================
 		// 2. Syntax arrow => function shorthand
-
-		var members = ['rizqi', 'dodi'];
+		let members = ['rizqi', 'dodi'];
 		members.forEach(function (member) {
 			console.log(member);
 		})
@@ -41,6 +40,26 @@
 		members.forEach((member, index) => {
 			console.log(member + ' ' + index);
 		})
+
+		// tidak perlu menulis return jika menggunakan Syntax arrow
+		let membersindex = members.map((member, index) => member + ' ' + index)
+		console.log(membersindex);
+
+		// contoh
+		let School = {
+			members: ['rizqi', 'dodi'],
+			getMembers() {
+				this.members.map((name) => {
+					console.log(this); // tidak perlu bind _this, otomatis this mengacu pada object nya sendiri
+				});
+			}
+		};
+		console.log('contoh : ');
+		console.log(School.getMembers());
+
+
+
+
 
 
 

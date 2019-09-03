@@ -129,8 +129,42 @@
 		console.log("======================================================");
 		console.log("5. Shorthand");
 
-		name = 'DanZai'
-		umur = 20
+		name = 'DanZai';
+		umur = 20;
+		getDataBio = () => {
+			return `member ${name} umurnya ${umur}`
+		}
+
+		// let bio = {
+		// 	name : name,
+		// 	umur : umur
+		// }
+
+		// es6 ver : 
+		// jika key dan value nya sama, maka langsung menuliskan nama key nya saja
+		let bio = {
+			name,
+			umur,
+			getDataBio
+		}
+		console.log(bio.getDataBio());
+
+		// contoh lain : 
+
+		let bio2 = {
+			name2: 'lil',
+			umur2: 20
+		}
+		let { umur2, name2 } = bio2
+		console.log(name2);
+
+		// contoh lain : 
+		let angka = [1, 2, 3]
+		let [a, b, c] = angka
+		console.log(a + b + c);
+
+
+
 
 
 

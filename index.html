@@ -80,6 +80,58 @@
 		console.log("======================================================");
 		console.log("3. Rest & Spread");
 
+		let data = ['danzai', '123', '20'];
+
+		// signIn = (username, password, umur) => {
+		// 	console.log(username + ' ' + password + ' umurnya ' + umur);
+		// }
+		// signIn(data[0], data[1]);
+
+		// es6 ver : 
+		// signIn(...data); // otomatis mengambil isi dari semua data dan memecahnya
+
+		signIn = (...member) => { // pada parameter didalam fungsi juga bisa di singkat menjadi ...member
+			console.log(member);
+		}
+		signIn(...data);
+
+		console.log("======================================================");
+		console.log("4. Templete Literal");
+
+		let username = 'danzai';
+		let umur = 20;
+
+		console.log('Member ' + username + ' umurnya ' + umur);
+
+		// es6 ver : 
+		// tidak perlu menggabungkan setiap string dengan let menggunakan +
+		// syarat : menggunakan back petik
+		console.log(`Member ${username} umurnya ${umur}`);
+
+		// pada Templete Literal bisa juga membuat string dengan multiline
+		let div = `
+			<div> ${username} </div>
+			<p> ${umur} </p>
+		`
+		console.log(div);
+
+		// contoh : 
+		test = (strings, username, umur) => { // parameter strings hanya mengambil string templete nya, tidak mengambil isi dari username dan umur nya
+			let string1 = strings[0]
+			let string2 = strings[1]
+
+			console.log(string1);
+			console.log(umur);
+
+		}
+		let output = test`nama saya adalah ${username}, umurnya ${umur}`
+
+		console.log("======================================================");
+		console.log("5. Shorthand");
+
+		name = 'DanZai'
+		umur = 20
+
 
 
 

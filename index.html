@@ -11,10 +11,36 @@
 
 		console.log('Learn ES6');
 
-		// 1. Variable
+		// ======================================================
+		// 1. Variable 
 		// Gunakan let, bukan var
 		let name = 'Danis Zaidan';
 
+		// ======================================================
+		// 2. Syntax arrow => function shorthand
+
+		var members = ['rizqi', 'dodi'];
+		members.forEach(function (member) {
+			console.log(member);
+		})
+
+		// es6 ver : 
+		members.forEach((member) => {
+			console.log(member);
+		})
+
+		// jika hanya 1 parameter, bisa seperti ini : 
+		members.forEach(member => {
+			console.log(member);
+		})
+
+		// jika hanya 1 baris / statment, bisa seperti ini : 
+		members.forEach(member => console.log(member))
+
+		// jika hanya lebih dari 1 parameter: 
+		members.forEach((member, index) => {
+			console.log(member + ' ' + index);
+		})
 
 
 

@@ -11,13 +11,15 @@
 
 		console.log('Learn ES6');
 
-		// ======================================================
-		// 1. Variable 
+		console.log("======================================================");
+		console.log("1. Variable");
 		// Gunakan let, bukan var
 		let name = 'Danis Zaidan';
+		console.log(name);
 
-		// ======================================================
-		// 2. Syntax arrow => function shorthand
+
+		console.log("======================================================");
+		console.log("2. Syntax arrow => function shorthand");
 		let members = ['rizqi', 'dodi'];
 		members.forEach(function (member) {
 			console.log(member);
@@ -56,6 +58,29 @@
 		};
 		console.log('contoh : ');
 		console.log(School.getMembers());
+
+		console.log("======================================================");
+		console.log("3. Default Parameter");
+		// createTag = (title, tag) => {
+		// 	tag = tag || 'html' // digunakan jika kita lupa memberikan tag atau sengaja untuk memberikan tag default jika kosong
+		// 	console.log('Forum ' + title + ' punya tag ' + tag);
+		// }
+		// createTag('tampilkan rusak', 'html')
+
+		// es6 ver
+		generateTitle = () => {
+			return 'ini judul default'
+		}
+		createTag = (title = generateTitle(), tag = 'bebas') => { // generateTitle() dan 'bebas' digunakan jika paarameter tag tidak diisi'
+			console.log('Forum ' + title + ' punya tag ' + tag);
+		}
+		// createTag('tampilkan rusak', 'html')
+		createTag()
+
+		console.log("======================================================");
+		console.log("3. Rest & Spread");
+
+
 
 
 
